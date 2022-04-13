@@ -1,0 +1,93 @@
+.boxShadow{
+  box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 10%);
+}
+
+#logo-title {
+  font-size: 1.5em;
+  text-align: center;
+}
+.material-icons {
+  vertical-align: middle;
+}
+
+.btn {
+  vertical-align: middle;
+}
+
+#dashboard-lateral {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 20%;
+}
+#lateral-header {
+  text-align: center;
+}
+#lateral-header .btn-group a {
+  padding: 5px;
+  color: #968282;
+}
+.accordion-button::after {
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+
+#menu-accodion{
+  padding: 0px;
+}
+
+ul#menu-accodion li.accordion-item{
+  padding: 0px 5px; 
+}
+a.accordion-button{
+  color: #474747;
+  padding: 10px 0px;
+  padding-left: 5px;
+}
+a.accordion-button:hover, a.accordion-button:after, .accordion-button:not(.collapsed){
+  color: #1D4998;
+}
+.accordion-button:focus {
+  background-color: rgb(230, 230, 230);
+  box-shadow: none;
+  border-radius: 5px; 
+}
+.accordion-item ul li {
+  padding-left: 0px;
+  padding: 2px;
+}
+.accordion-item ul li:hover{
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+}
+.accordion-item ul li a{
+  color: #474747;
+}
+.accordion-item ul li a:hover{
+  color: #1D4998;
+}
+.accordion-button .material-icons{
+  padding-right: 5px;
+}
+
+#dashboard-principal { 
+  color: #6c757d;
+  height: 100vh;
+  left: 20%;
+  position: relative;
+  top: 0;
+  width: 80%;
+
+}
+#dashboard-principal a, .btn-outline-primary{
+  color:#1D4998;
+}
+.btn-outline-primary:hover{
+  background-color: #1D4998;
+}
+ 

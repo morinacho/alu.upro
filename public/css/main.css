@@ -1,0 +1,27 @@
+@import url(dashboard.css); 
+
+body {
+  background-color: #f7f9fc;
+  color:#1D4998;
+}
+
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+#login-button{
+  background-color: #1D4998;
+}
+
+#nav-home{
+  background-color: rgb(255, 255, 255);
+  box-shadow:  15px 0px 15px rgb(204, 204, 204);
+  padding: 4px;
+}
+ 
+.accordion-item {
+  border: 0px solid rgb(255, 255, 255);
+}
