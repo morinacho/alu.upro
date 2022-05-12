@@ -5,7 +5,7 @@
 	define('DB_HOST', 'localhost'); 	 		 # Put the name of the host
 	define('DB_USER', 'root'); 	 		 		 # Put the username
 	define('DB_PASSWORD', ''); 					 # Put the password
-	define('DB_NAME', 'alu_upro');		 # Put the data base name
+	define('DB_NAME', 'plataforma_upro');		 # Put the data base name
 	
 	# App route
 	define('APP_ROUTE', dirname(dirname(dirname(__FILE__))));
@@ -14,5 +14,5 @@
 	define('URL_ROUTE', 'http://localhost/alu.upro/'); # Put the url route of your site
 
 	# Site name
-	define('SITENAME', 'Alumnos UPrO');  # Put the name of the site
+	define('SITENAME', 'Plataforma UPrO');  # Put the name of the site
 ?>

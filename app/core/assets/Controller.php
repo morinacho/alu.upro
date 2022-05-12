@@ -18,7 +18,7 @@
 			session_start();
 			require_once APP_ROUTE . '/main/view/components/header.php'; 
 
-			if(!Controller::authenticated()){
+			if(Controller::authenticated()){
 				if (file_exists('../app/'. $this->class  .'/view/' . $view . '.php')){
 					require_once '../app/'. $this->class  .'/view/' . $view . '.php';
 				}

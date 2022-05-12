@@ -1,4 +1,4 @@
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-3">
     <div class="col-4 col-sm-4 mt-5">
         <div class="card">
             <img src="<?php echo URL_ROUTE ?>media/system/images/upro-logo.png" class="card-img-top pt-2 pb-5">
@@ -25,5 +25,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

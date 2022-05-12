@@ -2,7 +2,7 @@
 
 body {
   background-color: #f7f9fc;
-  color:#1D4998;
+  color:#df0077;
 }
 
 ul li{
@@ -13,7 +13,8 @@ a{
 }
 
 #login-button{
-  background-color: #1D4998;
+  background-color: #df0077;
+  border-color: #df0077;
 }
 
 #nav-home{

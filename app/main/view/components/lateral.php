@@ -1,6 +1,6 @@
 <div class="row mt-1">
     <div class="col-12">
-        <p id="logo-title"><img src="<?php echo URL_ROUTE ?>media/system/icons/logo.png" /> Alu.UPrO</p>
+        <p id="logo-title"><img src="<?php echo URL_ROUTE ?>media/system/icons/logo.png" /><br>Plataforma Web</p>
   <hr>
     </div>
     <div class="col-12">
