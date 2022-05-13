@@ -2,7 +2,7 @@
 
 body {
   background-color: #f7f9fc;
-  color:#df0077;
+  color:#880d52;
 }
 
 ul li{
@@ -13,8 +13,8 @@ a{
 }
 
 #login-button{
-  background-color: #df0077;
-  border-color: #df0077;
+  background-color: #880d52;
+  border-color: #880d52;
 }
 
 #nav-home{
@@ -22,7 +22,7 @@ a{
   box-shadow:  15px 0px 15px rgb(204, 204, 204);
   padding: 4px;
 }
- 
+
 .accordion-item {
   border: 0px solid rgb(255, 255, 255);
 }

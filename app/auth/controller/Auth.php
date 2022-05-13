@@ -11,13 +11,13 @@
 
 		public function login(){
 			if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
-				if(isset($_POST['user-email']) && isset($_POST['user-password'])){
-					$email = $_POST['user-email'];
+				if(isset($_POST['user-name']) && isset($_POST['user-password'])){
+					$username = $_POST['user-name'];
 					$pass  = $_POST['user-password'];
-					$user  = $this->userModel->getUserByEmail($email);
+					$user  = $this->userModel->getUserByEmail($username);
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
-						$_SESSION['username'] = "$user->user_name $user->user_lastname";
+						$_SESSION['username'] = "$user->user_username";
 						$_SESSION['options']  = $this->mainModel->getUserOptions($user->user_id);
  						redirect('main');
 					} 

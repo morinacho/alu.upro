@@ -9,12 +9,11 @@
         public function getUserOptions($userId){
             $this->db->query('SELECT op.option_id, op.option_desc, op.option_icon, op.option_url
                               FROM option op 
-                              INNER JOIN option_has_user ou
-                              ON op.option_id = ou.option_id
+                              INNER JOIN user_has_option uo
+                              ON op.option_id = uo.option_id
                               INNER JOIN user u
-                              ON ou.user_id = u.user_id
-                              WHERE ou.option_has_user_status = 1 
-                              AND u.user_id = :user_id 
+                              ON uo.user_id = u.user_id
+                              WHERE u.user_id = :user_id 
             ');
             $this->db->bind(':user_id', $userId);
             $options = $this->db->getRecords(); 

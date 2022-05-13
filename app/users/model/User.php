@@ -29,9 +29,9 @@
 
 		public function getUserByEmail($email){
 			$email =  $this->db->deleteSpecialChars($email,'email'); 
-			$this->db->query('SELECT user_username FROM user WHERE user_username = :email');
+			$this->db->query('SELECT user_id, user_username, user_password FROM user WHERE user_username = :email');
 			$this->db->bind(':email', $email);  
-			echo $this->db->getRecord();
+			return $this->db->getRecord();
 		} 
 
 		public function addUser($param){
