@@ -22,3 +22,9 @@ INSERT INTO `person` (`person_id`, `person_names`, `person_lastname`, `person_bi
 
 -- Usuario administrador con contraseña: 1234
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_token`, `user_type_id`, `person_id`) VALUES ('1', 'uproadmin', '$2y$12$euYW7TtkHK6.ksufldeGrOy9cSmZ0spx3SmLhxlsa6MMUTmx2ublq', '$2y$12$euYW7TtkHK6.ksufldeGrOy9cSmZ0spx3SmLhxlsa6MMUTmx2ublq', '1', '1');
+
+-- TEST OPTION
+INSERT INTO `options` (`options_id`, `options_desc`, `options_url`, `options_icon`) VALUES ('1', 'Inscripciones', 'inscripciones', 'app_registration');
+INSERT INTO `actions` (`actions_id`, `actions_desc`, `actions_url`, `options_id`) VALUES ('1', 'Pre-inscripciones', 'inscripciones/preinscripciones', '1');
+INSERT INTO `user_has_options` (`user_id`, `options_id`, `status`) VALUES ('1', '1', '1');
+INSERT INTO `user_has_actions` (`user_id`, `actions_id`, `status`) VALUES ('1', '1', '1');

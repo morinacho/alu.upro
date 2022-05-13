@@ -4,29 +4,55 @@
   <hr>
     </div>
     <div class="col-12">
+----
+
+
+
+<div class="accordion accordion-flush" id="menu-accodion">
+    <?php
+        foreach ($_SESSION['options'] as $option) {
+            $dataBS = "data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->options_id ."'";
+            echo "
+                <div class='accordion-item'>
+                    <h2 class='accordion-header' id='flush-headingOne'>
+                        <button class='accordion-button collapsed' type='button'".$dataBS.">
+                            <span class='material-icons'>".$option[0]->options_icon."</span>".$option[0]->options_desc."
+                        </button>
+                    </h2>
+                    <div id='flush-collapseOne' class='accordion-collapse collapse' aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample'>
+                        <div class='accordion-body'>Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                </div> 
+            ";
+        }
+    ?>
+</div>
+
+
+----
         <ul class="accordion accordion-flush" id="menu-accodion">
             <?php
                 foreach ($_SESSION['options'] as $option) {
                     $optionURL = "";
-                    $dataBS = "data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'";
+                    $dataBS = "data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->options_id ."'";
                     
-                    if($option[0]->option_url != NULL){
-                        $optionURL = URL_ROUTE . $option[0]->option_url;
+                    if($option[0]->options_url != NULL){
+                        $optionURL = URL_ROUTE . $option[0]->options_url;
                         $dataBS = "";
                     } 
                     echo"
                         <li class='accordion-item'>
-                            <a href='$optionURL' class='accordion-button collapsed' $dataBS>
-                                <span class='material-icons'>".$option[0]->option_icon."</span>". $option[0]->option_desc ."
-                            </a>
+                            <button   class='accordion-button collapsed' $dataBS>
+                                <span class='material-icons'>".$option[0]->options_icon."</span>". $option[0]->options_desc ."
+                            </button>
                     ";
                     if(!empty($option[1])){
                         echo "
-                            <ul id='actions-". $option[0]->option_id ."' class='accordion-collapse collapse' data-bs-parent='#menu-accodion'>
+                            <ul id='actions-". $option[0]->options_id ."' class='accordion-collapse collapse' data-bs-parent='#menu-accodion'>
                         ";
                         foreach($option[1] as $action){ 
                             echo "
-                                <li><a href='". URL_ROUTE . $action->action_url ."'>". $action->action_desc ."</a></li>
+                                <li><a href='". URL_ROUTE . $action->actions_url ."'>". $action->actions_desc ."</a></li>
                             "; 
                         }
                         echo "</ul>";

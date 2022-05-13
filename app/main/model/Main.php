@@ -7,13 +7,13 @@
         }
 
         public function getUserOptions($userId){
-            $this->db->query('SELECT op.option_id, op.option_desc, op.option_icon, op.option_url
-                              FROM option op 
-                              INNER JOIN user_has_option uo
-                              ON op.option_id = uo.option_id
+            $this->db->query('SELECT op.options_id, op.options_desc, op.options_icon, op.options_url, uo.status
+                              FROM options op 
+                              INNER JOIN user_has_options uo
+                              ON op.options_id = uo.options_id
                               INNER JOIN user u
                               ON uo.user_id = u.user_id
-                              WHERE u.user_id = :user_id 
+                              WHERE uo.status = 1 AND u.user_id = :user_id 
             ');
             $this->db->bind(':user_id', $userId);
             $options = $this->db->getRecords(); 
@@ -21,21 +21,20 @@
             $result = array();
             foreach ($options as $option) { 
                 $actions = $this->getOptionActions($option->option_id, $userId);
-                $result[$option->option_id] = [$option, $actions];
+                array_push($result,[$option, $actions]);
             } 
            return $result;
         }
 
         public function getOptionActions($optionId, $userId){
-            $this->db->query('SELECT ac.action_desc, ac.action_url
-                              FROM action ac 
-                              INNER JOIN action_has_user au
-                              ON ac.action_id = au.action_id
+            $this->db->query('SELECT ac.actions_desc, ac.actions_url, au.status
+                              FROM actions ac 
+                              INNER JOIN user_has_actions au
+                              ON ac.actions_id = au.actions_id
                               INNER join user u
                               ON au.user_id = u.user_id
-                              WHERE au.action_has_user_status = 1
-                              AND u.user_id = :user_id
-                              AND ac.option_id = :option_id
+                              WHERE u.user_id = :user_id
+                              AND ac.options_id = :option_id
             ');
             $this->db->bind(':user_id', $userId);
             $this->db->bind(':option_id', $optionId);

@@ -1,4 +1,7 @@
-<?php require_once APP_ROUTE . '/main/view/components/top.php';?> 
+<?php require_once APP_ROUTE . '/main/view/components/top.php';
+print_r($_SESSION['options'])
+?> 
+
 	<!-- Cards-->
 	<div class="col-12 row mt-3 justify-content-around">
 		<div class="col-12">
