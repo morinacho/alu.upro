@@ -31,6 +31,4 @@ INSERT INTO `actions` (`actions_id`, `actions_desc`, `actions_url`, `options_id`
 
 -- PERMISSION DEFAULT
 INSERT INTO `user_has_options` (`user_id`, `options_id`, `status`) VALUES ('1', '1', '1'), ('1', '2', '1'), ('1', '3', '1'), ('1', '4', '1'), ('1', '5', '1'), ('1', '6', '1'), ('1', '7', '1'), ('1', '10', '1');
-INSERT INTO `user_has_actions` (`user_id`, `actions_id`, `status`) VALUES ('1', '1', '1'), ('1', '2', '1'), ('1', '3', '1'), ('1', '4', '1');
-INSERT INTO `user_has_actions` (`user_id`, `actions_id`, `status`) VALUES ('1', '1', '1'), ('1', '2', '1'), ('1', '3', '1'), ('1', '4', '1'), ('1', '5', '1');
-INSERT INTO `user_has_actions` (`user_id`, `actions_id`, `status`) VALUES ('1', '6', '1'), ('1', '7', '1'), ('1', '8', '1'), ('1', '9', '0');
+INSERT INTO `user_has_actions` (`user_id`, `actions_id`, `status`) VALUES ('1', '1', '1'), ('1', '2', '1'), ('1', '3', '1'), ('1', '4', '1'), ('1', '5', '1'), ('1', '6', '1'), ('1', '7', '1'), ('1', '8', '1'), ('1', '9', '1');

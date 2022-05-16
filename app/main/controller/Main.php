@@ -24,8 +24,5 @@
 		public function security(){
 			$this->view('security');
 		}
-
-		public function settings(){
-			$this->view('settings');
-		}
+ 
 }

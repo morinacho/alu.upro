@@ -19,7 +19,7 @@
                             echo "
                                 <div id='actions-".$option['options']->options_id."' class='accordion-collapse collapse' aria-labelledby='flush-headingOne' data-bs-parent='#menu-accordion'>
                                     <div class='accordion-body'>
-                                    $action->actions_desc
+                                    <a href='".URL_ROUTE."$action->actions_url' target='_top'>$action->actions_desc</a>
                                     </div>
                                 </div>";
                         }

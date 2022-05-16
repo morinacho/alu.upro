@@ -7,12 +7,9 @@
 			$this->studentModel = $this->model('Student');
 		}
 
-		public function index(){ 
-            $param = [ 'students' => $this->studentModel->getStudents()];
-            $this->view('index', $param);
-        }
+		public function index(){}
 
-		public function create(){ 
+		public function enroll(){ 
 			$this->view('create');
 		}
 
