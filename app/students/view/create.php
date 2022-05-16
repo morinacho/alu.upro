@@ -22,7 +22,7 @@
         </li>
     </ul>
     <div class="tab-content" id="enrollTabContent">
-        <div class="tab-pane fade show active" id="personal" role="tabpanel">Personales</div>
+        <?php include_once "tab-enroll-personal.php"?>
         <div class="tab-pane fade" id="academic" role="tabpanel">Academico</div>
         <div class="tab-pane fade" id="relatives" role="tabpanel">Familiares</div>
         <div class="tab-pane fade" id="health" role="tabpanel">Salud</div>
