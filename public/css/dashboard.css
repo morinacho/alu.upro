@@ -37,11 +37,11 @@
     background-image: none;
   }
   
-  #menu-accodion{
+  #menu-accordion{
     padding: 0px;
   }
   
-  ul#menu-accodion li.accordion-item{
+  #menu-accordion li.accordion-item{
     padding: 0px 5px; 
   }
   a.accordion-button{
